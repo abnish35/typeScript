@@ -1,15 +1,13 @@
-var num1 = document.getElementById('num1');
-var num2 = document.getElementById('num2');
-var btn = document.getElementById('btn');
-function add(num1, num2) {
-    return num1 + num2;
+// Union Type
+function add(input1, input2) {
+    var result;
+    if (typeof input1 === "number" && typeof input2 === "number") {
+        result = input1 + input2;
+    }
+    else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
 }
-btn.addEventListener("click", function () {
-    console.log(add(+num1.value, +num2.value));
-});
-// var num1: number = 12
-// var num2: number = 4
-// var res: boolean = num1>num2 && num2>num1 ;
-// console.log("sum is", num1 + num2)
-// console.log("difference is", num1 - num2)
-// console.log('true or false', res)
+console.log(add(45, 23));
+console.log(add("max", "well"));

@@ -1,26 +1,22 @@
-var num1 = document.getElementById('num1') as HTMLInputElement;
-var num2 = document.getElementById('num2') as HTMLInputElement;
-var btn = document.getElementById('btn')
+// Union Type
 
-function add(num1, num2){
-    return num1 + num2
+// const input1 = 3;
+// const input2 = 5;
+// Alias
+// 
+type combinator= number | string;
+
+function add(input1: combinator, input2: combinator){
+    let result;
+    if(typeof input1 === "number" && typeof input2 === "number"){
+        result = input1+input2 
+    }
+    else{
+        result = input1.toString() + input2.toString()
+    }
+    return result;
+
 }
 
-
-btn.addEventListener("click", ()=>{
-    console.log(add(+num1.value, +num2.value))
-})
-
-
-
-
-
-
-
-// var num1: number = 12
-// var num2: number = 4
-// var res: boolean = num1>num2 && num2>num1 ;
-
-// console.log("sum is", num1 + num2)
-// console.log("difference is", num1 - num2)
-// console.log('true or false', res)
+console.log(add(45, 23))
+console.log(add("max", "well"))
