@@ -1,6 +1,7 @@
+"use strict";
 // Union Type
-function add(input1: number | string, input2: number | string) {
-    var result;
+function add(input1, input2) {
+    let result;
     if (typeof input1 === "number" && typeof input2 === "number") {
         result = input1 + input2;
     }
@@ -10,4 +11,4 @@ function add(input1: number | string, input2: number | string) {
     return result;
 }
 console.log(add(45, 23));
-console.log(add("Abnish", "Kumar"));
+console.log(add("max", "well"));

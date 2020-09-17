@@ -11,4 +11,4 @@ function add(input1, input2) {
     return result;
 }
 console.log(add(45, 23));
-console.log(add("Abnish", "Kumar"));
+console.log(add("Abnish ", "Kumar"));
